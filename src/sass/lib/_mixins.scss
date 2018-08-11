@@ -1,0 +1,118 @@
+@mixin word-wrap {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+@mixin clearfix {
+  zoom: 1;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+@mixin svg-icon {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+
+  display: inline-block;
+  // vertical-align: middle;
+}
+
+@mixin img-fit {
+  object-fit: cover;
+  object-position: center;
+}
+
+@mixin button-reset {
+  background-color: transparent;
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  font: v(font);
+  // outline: none;
+  padding: 0;
+  cursor: pointer;
+  color: inherit;
+}
+
+@mixin control-reset {
+  background-color: transparent;
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  font: inherit;
+  outline: none;
+  padding: 0;
+  width: auto;
+  white-space: nowrap;
+  color: inherit;
+  line-height: normal;
+
+  border-radius: v(main-radius);
+}
+
+@mixin control-transition {
+  transition-property: color, background-color, box-shadow, border-color;
+}
+
+@mixin button-color($color) {
+  background-color: transparent;
+  color: c($color);
+  border-color: c($color, .4);
+
+  &:hover {
+    color: #fff;
+    background-color: c($color);
+    border-color: transparent;
+  }
+
+  &:active {
+    color: #fff;
+    // background-color: c($color, 6%);
+  }
+}
+
+@mixin form-control-color($color) {
+  color: c($color);
+  border-color: currentColor;
+  box-shadow: 0 0 2px currentColor;
+  // background-color: c(form-control-bg);
+}
+
+@mixin hidden-input {
+  position: absolute;
+  // visibility: hidden;
+  overflow: hidden;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+@mixin alert($style) {
+  &.is-#{$style} {
+    color: c($style);
+    background-color: c($style, .2);
+    border-color: c($style);
+  }
+
+  &.is-#{$style} &-dismiss {
+    color: c($style, .4);
+
+    &:hover {
+      color: c($style);
+    }
+  }
+}

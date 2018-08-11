@@ -1,0 +1,85 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body * {
+  transition-timing-function: v(transition-function);
+  transition-duration: v(transition-duration);
+  transition-delay: v(transition-delay);
+  transition-property: none;
+}
+
+html {
+  font: v(font);
+  letter-spacing: v(letter-spacing);
+}
+
+body {
+  font-size: v(body-font-size);
+  color: c(text);
+  background-color: c(body-bg);
+}
+
+img {
+  vertical-align: top;
+  border: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: .5em;
+}
+
+h1 { font-size: 4rem; }
+h2 { font-size: 3.2rem; }
+h3 { font-size: 2.8rem; }
+h4 { font-size: 2.4rem; }
+h5 { font-size: 2.0rem; }
+h6 { font-size: 1.6rem; }
+
+p, ul, ol, li {
+  line-height: v(line-height-typography);
+  margin: 0 0 calc(#{v(line-height-typography)} * 1em);
+}
+
+ul, ol {
+  padding: 0 0 0 2em;
+  margin: 0 0 1em 0;
+}
+
+li {
+  margin-bottom: .2em;
+}
+
+code {
+  color: var(--code-text);
+  padding: 0.25rem 0.5rem;
+  margin: 0;
+  font-size: 0.85em;
+  background-color: v(code-bg);
+  border-radius: v(main-radius);
+}
+
+mark {
+  background-color: c(mark-bg);
+}
+
+blockquote {
+  font-size: 1.4rem;
+  color: c(blockquote-text);
+  border-left: 0.2rem solid c(blockquote-border);
+  margin-left: 0;
+  padding: .5rem 0 .5rem 1.5rem;
+}
+
+::-webkit-input-placeholder { color: v(input-placeholder); }
+::-moz-placeholder { color: v(input-placeholder); }
+:-moz-placeholder { color: v(input-placeholder); }
+:-ms-input-placeholder { color: v(input-placeholder); }

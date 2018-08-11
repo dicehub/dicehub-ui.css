@@ -1,0 +1,190 @@
+html
+  font-size 10px
+
+html .content:not(.custom)
+  max-width 1300px
+  padding-top 100px
+
+  > *:first-child
+    margin-top 0
+
+  a:not(.btn):hover
+    text-decoration none
+
+  p.demo
+    padding 1rem 1.5rem
+    border 1px solid #ddd
+    border-radius 4px
+
+  a
+    color inherit
+    font-weight 400
+
+  a[target]
+    color #807fe2
+
+    &:hover
+      text-decoration underline
+
+  a.btn
+    text-decoration none
+
+  h1, h2, h3, h4, h5, h6
+    margin-bottom 1em
+    margin-top 2.2em
+    padding-top 0
+
+    &:hover .header-anchor
+      opacity 1
+      color #3eaf7c
+
+  h1 { font-size: 4rem; }
+  h2 { font-size: 3.2rem; }
+  h3 { font-size: 2.8rem; }
+  h4 { font-size: 2.4rem; }
+  h5 { font-size: 2.0rem; }
+  h6 { font-size: 1.6rem; }
+
+  a.header-anchor
+    font-size 0.85em
+    float left
+    margin-left -0.87em
+    padding-right 0.23em
+    margin-top 0.125em
+    opacity 0
+    color black
+
+    &:hover
+      text-decoration none
+
+  [class*="language-"]
+    margin-top 2em
+
+  p, ul, ol
+    line-height 1.7
+
+  hr
+    border 0
+    border-top 1px solid $borderColor
+
+  table
+    margin 0
+    display table
+    margin-bottom 1.6rem
+
+  tr
+    border-top none
+
+    // &:nth-child(2n)
+    //   background-color #f6f8fa
+
+  // th, td
+  //   border 1px solid #dfe2e5
+  //   padding .6em 1em
+
+  .v-buttons
+    > *
+      margin-right 1rem
+
+  div[class*="language-"]::before
+    font-size 1.3rem
+
+
+html .content:not(.custom) .ui
+  ul, ol
+    padding-left 2em
+
+  h1, h2, h3, h4, h5, h6
+    font-weight 500
+    line-height 1.2
+    margin 0 0 .5em
+
+    .content:not(.custom) > &
+      margin 0 0 .5em 0
+      padding 0
+
+      &:first-child
+        margin-top -1.5rem
+        margin-bottom 1rem
+
+        + p, + pre, + .custom-block
+          margin-top 2rem
+
+  h1 { font-size: 4rem; }
+  h2 { font-size: 3.2rem; }
+  h3 { font-size: 2.8rem; }
+  h4 { font-size: 2.4rem; }
+  h5 { font-size: 2.0rem; }
+  h6 { font-size: 1.6rem; }
+
+  h2
+    padding-bottom 0
+    border-bottom 0
+
+  code:not(:first-child)
+    margin-left 7px
+
+  blockquote
+    font-size 1.4rem !important
+    color #999
+    border-left 0.2rem solid #dfe2e5
+    margin-left 0
+    padding .5rem 0 .5rem 1.5rem
+
+
+html .content:not(.custom) .columns
+  display flex
+  flex-wrap wrap
+
+  [class*='grid-col']
+    padding 10px 15px
+
+  .grid-col-2
+    width 50%
+
+
+// Restore nav
+
+html .sidebar
+  top 5.8rem
+  font-size: 1.5rem
+  width: 20em
+
+  ul
+    line-height: 1.7
+
+html .navbar
+  font-size 16px
+  height auto
+  padding 0.7em 1.5em
+
+  .logo
+    height auto
+    min-width auto
+
+  .site-name
+    font-size 1.2em
+    line-height 1.8em
+
+  .links
+    font-size 1em
+    right 1.5em
+    top 0.7em
+
+
+html .search-box
+  input
+    width 13em
+    font-size 16px
+    line-height 2em
+    padding 0 0.5em 0 2em
+    // background #fff url(/assets/img/search.83621669.svg) 0.6rem 0.5rem no-repeat
+    background-size 1em 1em
+    background-position left 10px center
+
+  .suggestions
+    width 20em
+    top 1.5em
+
+  .suggestion
+    padding 0.4em 0.6em

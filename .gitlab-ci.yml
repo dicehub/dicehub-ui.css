@@ -1,0 +1,25 @@
+image: node:10.8.0
+
+stages:
+  - build_and_deploy
+
+build and deploy css:
+  stage: build_and_deploy
+  script:
+    - npm install
+    - npm run build
+    - ls ./dist
+  only:
+    - master
+  tags:
+    - docker-runner
+
+build and deploy documentation:
+  stage: build_and_deploy
+  script:
+    - echo "Building documentation ..."
+  only:
+    - master
+  tags:
+    - docker-runner
+
