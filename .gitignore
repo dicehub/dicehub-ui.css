@@ -28,6 +28,7 @@ package-lock.json
 
 # Vuepress
 docs/.vuepress/public/*.css
+docs/.vuepress/public/*.svg
 docs/.vuepress/vuepress/
 
 /package-lock.json
