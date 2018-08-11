@@ -9,7 +9,7 @@
     "start:vuepress": "npm run sprite:docs && vuepress dev docs",
     "build:vuepress": "npm run sprite:docs && vuepress build docs -d dist_docs",
     "build": "npm run build:gulp",
-    "build:docs": "npm run build:vuepress",
+    "build:docs": "npm run build && npm run build:vuepress",
     "sprite:docs": "svg2sprite src/icons docs/.vuepress/public/sprite.svg --iconPrefix=svg- --stripEmptyTags --stripExtraAttrs",
     "sprite:ui": "svg2sprite src/icons dist/sprite.svg --iconPrefix=svg- --stripEmptyTags --stripExtraAttrs"
   },
