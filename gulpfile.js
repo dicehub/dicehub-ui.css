@@ -125,7 +125,7 @@ gulp.task('sass', () => {
         require('autoprefixer')(config.postcss.autoprefixer),
     ]))
 
-    .pipe(_.if(config.minify, _.cleanCss()))
+//     .pipe(_.if(config.minify, _.cleanCss()))
 
     // docs
     .pipe(_.rename({ basename: 'dicehub-ui' }))
