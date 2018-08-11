@@ -27,7 +27,7 @@ package-lock.json
 .directory
 
 # Vuepress
-docs/.vuepress/public/
+docs/.vuepress/public/*.css
 docs/.vuepress/vuepress/
 
 /package-lock.json
