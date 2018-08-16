@@ -72,11 +72,22 @@ mark {
 }
 
 blockquote {
-  font-size: 1.4rem;
+  font-size: var(--blockquote-font-size);
   color: toThemeColor(blockquote-text);
-  border-left: 0.2rem solid toThemeColor(blockquote-border);
+  border-left: var(--blockquote-border-size) solid toThemeColor(blockquote-border);
   margin-left: 0;
-  padding: .5rem 0 .5rem 1.5rem;
+  padding: var(--blockquote-padding);
+  background-color: toThemeColor(blockquote-bg);
+
+  p {
+    margin-bottom: 0.5em;
+    font-style: italic;
+  }
+
+  cite {
+    color: toThemeColor(cite-color);
+    font-size: .8em;
+  }
 }
 
 ::-webkit-input-placeholder { color: var(--input-placeholder); }

@@ -121,15 +121,14 @@ gulp.task('sass', () => {
     .pipe(_.sass(config.sass))
 
     .pipe(_.postcss([
-        require('postcss-custom-properties'),
+        // require('postcss-custom-properties'),
         require('autoprefixer')(config.postcss.autoprefixer),
     ]))
-
-//     .pipe(_.if(config.minify, _.cleanCss()))
 
     // docs
     .pipe(_.rename({ basename: 'dicehub-ui' }))
     .pipe(gulp.dest(path.sass.docsDest))
+
     // ui
     .pipe(_.rename({ basename: 'dicehub-ui' }))
     .pipe(gulp.dest(path.sass.dest))
