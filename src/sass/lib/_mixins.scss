@@ -85,10 +85,13 @@
 }
 
 @mixin form-control-color($color) {
-  color: toThemeColor($color);
-  border-color: currentColor;
-  box-shadow: 0 0 2px currentColor;
-  // background-color: toThemeColor(form-control-bg);
+  border-color: toThemeColor($color);
+  box-shadow: 0 0 2px toThemeColor($color);
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
 }
 
 @mixin hidden-input {
