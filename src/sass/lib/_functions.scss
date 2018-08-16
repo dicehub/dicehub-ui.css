@@ -10,12 +10,8 @@
   @return $string;
 }
 
-@function c($color, $opacity: 1) {
+@function toThemeColor($color, $opacity: 1) {
   @return unquote('rgba(var(--#{$color}), #{$opacity})');
-}
-
-@function v($color) {
-  @return unquote('var(--#{$color})');
 }
 
 @function convert-theme-color($color) {
