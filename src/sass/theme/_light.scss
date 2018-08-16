@@ -1,19 +1,25 @@
 html.theme-light,
 // use as default
 :root {
+  // Base
   --font-size: 62.5%;
   --body-font-size: 1.3rem;
   --line-height: 1;
   --line-height-typography: 1.6;
   --font-family: Nunito, 'Open Sans', sans-serif;
   --font: var(--font-size)/var(--line-height) var(--font-family);
-
   --main-radius: 4px;
 
+  // Transition
   --transition-function: cubic-bezier(.5, 0, .2, 1);
   --transition-duration: 150ms;
   --transition-delay: 0s;
 
+  // Multipliers
+  --medium-multiplier: 1.2;
+  --large-multiplier: 1.4;
+
+  // Main colors
   --text: #{convert-theme-color(#5f6677)};
   --body-bg: #{convert-theme-color(#fafafa)};
   --primary: #{convert-theme-color(#4f8ff7)};
@@ -25,6 +31,7 @@ html.theme-light,
   --accent: var(--primary);
   --link: #{convert-theme-color(#00a7f7)};
 
+  // Form
   --form-prefix: #{convert-theme-color(#8c96aa)};
   --form-path-bg: #{convert-theme-color(#fafafa)};
   --form-control-bg: #{convert-theme-color(#ffffff)};
@@ -33,22 +40,29 @@ html.theme-light,
   --form-switch: #{convert-theme-color(#ffffff)};
   --form-switch-box-bg: #{convert-theme-color(#b9c7d4)};
 
+  // Table
   --table-striped-bg: #{convert-theme-color(#f8f9fa)};
   --table-row-hover-bg: #{convert-theme-color(#fafafb)};
   --table-tfoot-bg: #{convert-theme-color(#ebebeb)};
   --table-thead-bg: #{convert-theme-color(#f9fafb)};
 
+  // Code
   --code-text: #{convert-theme-color(#476582)};
   --code-bg: rgba(27, 31, 35, .05);
 
+  // Mark
   --mark-bg: #{convert-theme-color(#f2b126)};
 
-  --blockquote-text: #{convert-theme-color(#999999)};
-  --blockquote-border: #{convert-theme-color(#dfe2e5)};
+  // Blockquote
+  --blockquote-font-size: 1.7rem;
+  --blockquote-text: #{convert-theme-color(#777777)};
+  --blockquote-bg: #{convert-theme-color(#f9f9f9)};
+  --blockquote-border: #{convert-theme-color(#2886e4)};
+  --blockquote-padding: 1.8rem 0 1.8rem 2.5rem;
+  --blockquote-border-size: 0.2rem;
 
-  // Multipliers
-  --medium-multiplier: 1.2;
-  --large-multiplier: 1.4;
+  // Cite
+  --cite-color: #{convert-theme-color(#999999)};
 
   // Controls
   --control-border-width: .07em;
