@@ -1,7 +1,15 @@
 {
-  "name": "dicehub-ui",
+  "name": "@dicehub/dicehub-ui.css",
   "version": "0.0.1",
   "description": "Dicehub UI Framework",
+  "author": "Dicehub Team",
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "framework",
+    "dicehub",
+    "css-framework"
+  ],
   "main": "dist/dicehub-ui.min.css",
   "scripts": {
     "start:gulp": "npm run sprite:ui && gulp",
@@ -34,5 +42,15 @@
     "svg2sprite-cli": "^2.0.1",
     "vuepress": "^0.13.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "files": [
+    "dist/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dicehub/dicehub-ui.css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dicehub/dicehub-ui.css/issues"
+  }
 }
