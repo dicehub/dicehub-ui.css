@@ -1,10 +1,10 @@
 .alert {
-  padding: v(alert-padding);
-  font-weight: v(alert-font-weight);
-  border-radius: v(main-radius);
-  border: v(alert-border-width) solid;
-  font-size: v(alert-font-size);
-  line-height: v(alert-line-height);
+  padding: var(--alert-padding);
+  font-weight: var(--alert-font-weight);
+  border-radius: var(--main-radius);
+  border: var(--alert-border-width) solid;
+  font-size: var(--alert-font-size);
+  line-height: var(--alert-line-height);
   text-align: center;
   position: relative;
 

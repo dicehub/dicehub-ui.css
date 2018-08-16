@@ -40,7 +40,7 @@
   display: inline-block;
   vertical-align: middle;
   border: none;
-  font: v(font);
+  font: var(--font);
   // outline: none;
   padding: 0;
   cursor: pointer;
@@ -60,7 +60,7 @@
   color: inherit;
   line-height: normal;
 
-  border-radius: v(main-radius);
+  border-radius: var(--main-radius);
 }
 
 @mixin control-transition {
@@ -69,26 +69,26 @@
 
 @mixin button-color($color) {
   background-color: transparent;
-  color: c($color);
-  border-color: c($color, .4);
+  color: toThemeColor($color);
+  border-color: toThemeColor($color, .4);
 
   &:hover {
     color: #fff;
-    background-color: c($color);
+    background-color: toThemeColor($color);
     border-color: transparent;
   }
 
   &:active {
     color: #fff;
-    // background-color: c($color, 6%);
+    // background-color: toThemeColor($color, 6%);
   }
 }
 
 @mixin form-control-color($color) {
-  color: c($color);
+  color: toThemeColor($color);
   border-color: currentColor;
   box-shadow: 0 0 2px currentColor;
-  // background-color: c(form-control-bg);
+  // background-color: toThemeColor(form-control-bg);
 }
 
 @mixin hidden-input {
@@ -103,16 +103,16 @@
 
 @mixin alert($style) {
   &.is-#{$style} {
-    color: c($style);
-    background-color: c($style, .2);
-    border-color: c($style);
+    color: toThemeColor($style);
+    background-color: toThemeColor($style, .2);
+    border-color: toThemeColor($style);
   }
 
   &.is-#{$style} &-dismiss {
-    color: c($style, .4);
+    color: toThemeColor($style, .4);
 
     &:hover {
-      color: c($style);
+      color: toThemeColor($style);
     }
   }
 }

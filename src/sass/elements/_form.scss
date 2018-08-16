@@ -1,6 +1,6 @@
 .form {
   &-group {
-    margin-bottom: v(control-margin);
+    margin-bottom: var(--control-margin);
     position: relative;
     display: block;
 
@@ -23,9 +23,9 @@
   &-path {
     @include control-reset();
 
-    background-color: c(form-path-bg);
-    border: v(control-border-width) solid c(border);
-    font-size: v(control-font-size);
+    background-color: toThemeColor(form-path-bg);
+    border: var(--control-border-width) solid toThemeColor(border);
+    font-size: var(--control-font-size);
     padding: .6em 1em;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -37,11 +37,11 @@
     }
 
     &.is-medium {
-      font-size: calc(#{v(control-font-size)} * #{v(medium-multiplier)});
+      font-size: calc(var(--control-font-size) * var(--medium-multiplier));
     }
 
     &.is-large {
-      font-size: calc(#{v(control-font-size)} * #{v(large-multiplier)});
+      font-size: calc(var(--control-font-size) * var(--large-multiplier));
     }
   }
 
@@ -51,7 +51,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: c(form-prefix);
+    color: toThemeColor(form-prefix);
 
     .u-svg-icon {
       vertical-align: top;
@@ -79,27 +79,27 @@
     @include control-transition;
 
     width: 100%;
-    border: v(control-border-width) solid c(border);
-    font-size: v(control-font-size);
+    border: var(--control-border-width) solid toThemeColor(border);
+    font-size: var(--control-font-size);
     padding: .6em 1em;
 
     &.is-disabled,
     &[disabled] {
       opacity: .7;
       cursor: not-allowed;
-      color: c(text) !important;
+      color: toThemeColor(text) !important;
       background-color: transparent !important;
-      border-color: c(border) !important;
+      border-color: toThemeColor(border) !important;
     }
 
     &:hover {
-      border-color: c(accent, .7);
-      background-color: c(accent, .05);
+      border-color: toThemeColor(accent, .7);
+      background-color: toThemeColor(accent, .05);
     }
 
     &:focus {
-      border-color: c(accent);
-      box-shadow: 0 0 3px c(accent, .7);
+      border-color: toThemeColor(accent);
+      box-shadow: 0 0 3px toThemeColor(accent, .7);
     }
 
     &.is-success { @include form-control-color(success); }
@@ -107,11 +107,11 @@
     &.is-danger { @include form-control-color(danger); }
 
     &.is-medium {
-      font-size: calc(#{v(control-font-size)} * #{v(medium-multiplier)});
+      font-size: calc(var(--control-font-size) * var(--medium-multiplier));
     }
 
     &.is-large {
-      font-size: calc(#{v(control-font-size)} * #{v(large-multiplier)});
+      font-size: calc(var(--control-font-size) * var(--large-multiplier));
     }
 
     &:matches(textarea) {
@@ -127,7 +127,7 @@
     flex-shrink: 0;
     padding-top: 0.7em;
     display: block;
-    color: c(text);
+    color: toThemeColor(text);
     margin-bottom: 0.6em;
   }
 
@@ -160,13 +160,13 @@
 
 .checkbox,
 .radio {
-  background-color: c(form-radio-bg);
+  background-color: toThemeColor(form-radio-bg);
   width: 1.7rem;
   height: 1.7rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: c(border);
+  color: toThemeColor(border);
   border: 1px solid currentColor;
   flex-shrink: 0;
   transition-property: color, border-color, background-color;
@@ -181,7 +181,7 @@
   font-size: 1.1rem;
 
   input[type='checkbox']:checked + & {
-    color: c(accent);
+    color: toThemeColor(accent);
 
     svg {
       opacity: 1;
@@ -205,14 +205,14 @@
     width: .7rem;
     height: .7rem;
     border-radius: 50%;
-    background-color: c(accent);
+    background-color: toThemeColor(accent);
     transform: scale(0);
 
     transition-property: transform;
   }
 
   input[type='radio']:checked + & {
-    color: c(accent);
+    color: toThemeColor(accent);
   }
 
   input[type='radio']:checked + &::after {
@@ -234,7 +234,7 @@
     height: 1.6rem;
     display: inline-block;
     border-radius: .8rem;
-    background-color: c(form-switch-box-bg);
+    background-color: toThemeColor(form-switch-box-bg);
     position: relative;
     transition-property: background-color;
 
@@ -247,7 +247,7 @@
       display: block;
       width: 1.4rem;
       height: 1.4rem;
-      background-color: c(form-switch);
+      background-color: toThemeColor(form-switch);
       position: absolute;
       left: 1px;
       top: 1px;
@@ -257,7 +257,7 @@
   }
 
   input:checked + &-box {
-    background-color: c(accent);
+    background-color: toThemeColor(accent);
 
     &::after {
       left: 1.2rem;

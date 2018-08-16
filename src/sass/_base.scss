@@ -3,21 +3,21 @@
 }
 
 body * {
-  transition-timing-function: v(transition-function);
-  transition-duration: v(transition-duration);
-  transition-delay: v(transition-delay);
+  transition-timing-function: var(--transition-function);
+  transition-duration: var(--transition-duration);
+  transition-delay: var(--transition-delay);
   transition-property: none;
 }
 
 html {
-  font: v(font);
-  letter-spacing: v(letter-spacing);
+  font: var(--font);
+  letter-spacing: var(--letter-spacing);
 }
 
 body {
-  font-size: v(body-font-size);
-  color: c(text);
-  background-color: c(body-bg);
+  font-size: var(--body-font-size);
+  color: toThemeColor(text);
+  background-color: toThemeColor(body-bg);
 }
 
 img {
@@ -45,8 +45,8 @@ h5 { font-size: 2.0rem; }
 h6 { font-size: 1.6rem; }
 
 p, ul, ol, li {
-  line-height: v(line-height-typography);
-  margin: 0 0 calc(#{v(line-height-typography)} * 1em);
+  line-height: var(--line-height-typography);
+  margin: 0 0 calc(var(--line-height-typography) * 1em);
 }
 
 ul, ol {
@@ -63,23 +63,23 @@ code {
   padding: 0.25rem 0.5rem;
   margin: 0;
   font-size: 0.85em;
-  background-color: v(code-bg);
-  border-radius: v(main-radius);
+  background-color: var(--code-bg);
+  border-radius: var(--main-radius);
 }
 
 mark {
-  background-color: c(mark-bg);
+  background-color: toThemeColor(mark-bg);
 }
 
 blockquote {
   font-size: 1.4rem;
-  color: c(blockquote-text);
-  border-left: 0.2rem solid c(blockquote-border);
+  color: toThemeColor(blockquote-text);
+  border-left: 0.2rem solid toThemeColor(blockquote-border);
   margin-left: 0;
   padding: .5rem 0 .5rem 1.5rem;
 }
 
-::-webkit-input-placeholder { color: v(input-placeholder); }
-::-moz-placeholder { color: v(input-placeholder); }
-:-moz-placeholder { color: v(input-placeholder); }
-:-ms-input-placeholder { color: v(input-placeholder); }
+::-webkit-input-placeholder { color: var(--input-placeholder); }
+::-moz-placeholder { color: var(--input-placeholder); }
+:-moz-placeholder { color: var(--input-placeholder); }
+:-ms-input-placeholder { color: var(--input-placeholder); }
