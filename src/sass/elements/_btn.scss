@@ -2,8 +2,8 @@
   @include control-reset;
   @include control-transition;
 
-  border: v(control-border-width) solid;
-  font-size: v(control-font-size);
+  border: var(--control-border-width) solid;
+  font-size: var(--control-font-size);
   padding: .6em 1em;
   cursor: pointer;
   min-width: 11em;
@@ -17,25 +17,25 @@
 
   &.is-cancel {
     background-color: transparent;
-    color: c(primary);
+    color: toThemeColor(primary);
     border-color: transparent;
 
     &:hover {
-      background-color: c(primary, .3);
+      background-color: toThemeColor(primary, .3);
       border-color: transparent;
     }
 
     &:active {
-      // background-color: c(primary, .4);
+      // background-color: toThemeColor(primary, .4);
     }
   }
 
   &.is-secondary {
     background-color: transparent;
-    border-color: c(border, .6);
+    border-color: toThemeColor(border, .6);
 
     &:hover {
-      border-color: c(border);
+      border-color: toThemeColor(border);
     }
   }
 
@@ -43,17 +43,17 @@
   &[disabled] {
     opacity: .7;
     cursor: not-allowed;
-    color: c(text) !important;
+    color: toThemeColor(text) !important;
     background-color: transparent !important;
-    border-color: c(border) !important;
+    border-color: toThemeColor(border) !important;
   }
 
   &.is-medium {
-    font-size: calc(#{v(control-font-size)} * #{v(medium-multiplier)});
+    font-size: calc(var(--control-font-size) * var(--medium-multiplier));
   }
 
   &.is-large {
-    font-size: calc(#{v(control-font-size)} * #{v(large-multiplier)});
+    font-size: calc(var(--control-font-size) * var(--large-multiplier));
   }
 
   &.is-loading {

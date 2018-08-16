@@ -3,13 +3,13 @@
   border-spacing: 0;
   width: 100%;
   text-align: left;
-  border: 1px solid c(border);
-  border-radius: v(main-radius);
+  border: 1px solid toThemeColor(border);
+  border-radius: var(--main-radius);
 
   &.table-striped {
     tbody {
       tr:nth-of-type(even) {
-        background-color: c(table-striped-bg);
+        background-color: toThemeColor(table-striped-bg);
       }
     }
   }
@@ -18,7 +18,7 @@
     tbody {
       tr {
         &:hover {
-          background-color: c(table-row-hover-bg);
+          background-color: toThemeColor(table-row-hover-bg);
         }
       }
     }
@@ -37,16 +37,16 @@
 
   td,
   th {
-    border-bottom: 1px solid c(border);
+    border-bottom: 1px solid toThemeColor(border);
   }
 
   td {
-    padding: v(table-td-padding);
+    padding: var(--table-td-padding);
   }
 
   th {
     border-bottom-width: 2px;
-    padding: v(table-th-padding);
+    padding: var(--table-th-padding);
   }
 
   thead th,
@@ -55,10 +55,10 @@
   }
 
   thead tr {
-    background-color: c(table-thead-bg);
+    background-color: toThemeColor(table-thead-bg);
   }
 
   tfoot tr {
-    background-color: c(table-tfoot-bg);
+    background-color: toThemeColor(table-tfoot-bg);
   }
 }
