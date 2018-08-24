@@ -15,7 +15,7 @@ Forms provide the most common control styles used in forms, including input, tex
     <div class="form-field">
       <input class="form-control" type="text" placeholder="Skills">
       <div class="form-suffix">
-        <svg class="u-svg-icon"><use xlink:href="sprite.svg#svg-search"></use></svg>
+        <i class="fas fa-filter"></i>
       </div>
     </div>
   </div>
@@ -73,7 +73,7 @@ Forms provide the most common control styles used in forms, including input, tex
       <input class="form-control" type="text" placeholder="Skills">
 
       <div class="form-suffix">
-        <svg class="u-svg-icon"><use xlink:href="sprite.svg#svg-search"></use></svg>
+        <i class="fas fa-filter"></i>
       </div>
     </div>
   </div>

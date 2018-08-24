@@ -13,7 +13,7 @@ Provide contextual feedback messages for typical user actions with the handful o
 
 <br>
 
-<div class="alert is-info">
+<div class="alert is-primary">
   Heads up! This alert needs your attention, but it's not super important.
 </div>
 
@@ -35,7 +35,7 @@ Provide contextual feedback messages for typical user actions with the handful o
   Well done! You successfully read this important alert message.
 </div>
 
-<div class="alert is-info">
+<div class="alert is-primary">
   Heads up! This alert needs your attention, but it's not super important.
 </div>
 
@@ -68,13 +68,13 @@ Provide contextual feedback messages for typical user actions with the handful o
 <br>
 
 
-<div class="alert is-info">
+<div class="alert is-primary">
   Heads up! This alert needs your attention, but it's not super important.
   <button class="alert-dismiss" type="button"></button>
 </div>
 
 ```html
-<div class="alert is-info">
+<div class="alert is-primary">
   Heads up! This alert needs your attention, but it's not super important.
   <button class="alert-dismiss" type="button"></button>
 </div>

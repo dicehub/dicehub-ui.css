@@ -1,4 +1,5 @@
-html.theme-light,
+// Doesn't work with postcss-custom-properties
+// html.theme-light,
 // use as default
 :root {
   // Base
@@ -9,6 +10,8 @@ html.theme-light,
   --font-family: Nunito, 'Open Sans', sans-serif;
   --font: var(--font-size)/var(--line-height) var(--font-family);
   --main-radius: 4px;
+  --focus-outline: 2px solid rgba(0, 153, 255, .7);
+  --focus-outline-offset: 1px;
 
   // Transition
   --transition-function: cubic-bezier(.5, 0, .2, 1);
@@ -22,23 +25,41 @@ html.theme-light,
   // Main colors
   --text: #{convert-theme-color(#5f6677)};
   --body-bg: #{convert-theme-color(#fafafa)};
-  --primary: #{convert-theme-color(#4f8ff7)};
+
+  --primary: #{convert-theme-color(#3279f7)};
+  --primary-hover: #{convert-theme-color(darken(#3279f7, 7%))};
+  --primary-active: #{convert-theme-color(darken(#3279f7, 20%))};
+
   --success: #{convert-theme-color(#8Bc34A)};
-  --info: #{convert-theme-color(#00a7f7)};
+  --success-hover: #{convert-theme-color(darken(#8Bc34A, 7%))};
+  --success-active: #{convert-theme-color(darken(#8Bc34A, 20%))};
+
   --warning: #{convert-theme-color(#ff8f00)};
+  --warning-hover: #{convert-theme-color(darken(#ff8f00, 7%))};
+  --warning-active: #{convert-theme-color(darken(#ff8f00, 20%))};
+
   --danger: #{convert-theme-color(#f7156e)};
+  --danger-hover: #{convert-theme-color(darken(#f7156e, 7%))};
+  --danger-active: #{convert-theme-color(darken(#f7156e, 20%))};
+
   --border: #{convert-theme-color(#e2e3e5)};
-  --accent: var(--primary);
   --link: #{convert-theme-color(#00a7f7)};
 
   // Form
   --form-prefix: #{convert-theme-color(#8c96aa)};
   --form-path-bg: #{convert-theme-color(#fafafa)};
   --form-control-bg: #{convert-theme-color(#ffffff)};
-  --input-placeholder: rgba(140, 150, 169, .65);
+  --input-placeholder: rgb(140, 150, 169);
   --form-radio-bg: #{convert-theme-color(#ffffff)};
   --form-switch: #{convert-theme-color(#ffffff)};
   --form-switch-box-bg: #{convert-theme-color(#b9c7d4)};
+
+  // Button
+  --button-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
+  --button-color: #{convert-theme-color(#fff)};
+  --button-outline-color: var(--text);
+  --button-state-color: #{convert-theme-color(#fff)};
+  --button-letter-spacing: 0.05em;
 
   // Table
   --table-striped-bg: #{convert-theme-color(#f8f9fa)};
@@ -68,6 +89,7 @@ html.theme-light,
   --control-border-width: .07em;
   --control-font-size: 1.3rem;
   --control-margin: 2rem;
+  --control-padding: 0.6em 1em;
 
   // Alert
   --alert-padding: 0.6em 2em;

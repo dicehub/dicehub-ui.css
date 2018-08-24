@@ -17,7 +17,7 @@
 
   @include alert(success);
   @include alert(warning);
-  @include alert(info);
+  @include alert(primary);
   @include alert(danger);
 
   &-dismiss {

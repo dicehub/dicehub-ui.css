@@ -2,7 +2,9 @@
   box-sizing: border-box;
 }
 
-body * {
+body *,
+body ::before,
+body ::after, {
   transition-timing-function: var(--transition-function);
   transition-duration: var(--transition-duration);
   transition-delay: var(--transition-delay);
