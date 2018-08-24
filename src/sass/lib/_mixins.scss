@@ -61,6 +61,10 @@
   line-height: normal;
 
   border-radius: var(--main-radius);
+
+  &:focus {
+    @include focus-outline;
+  }
 }
 
 @mixin control-transition {
@@ -68,19 +72,24 @@
 }
 
 @mixin button-color($color) {
-  background-color: transparent;
-  color: toThemeColor($color);
-  border-color: toThemeColor($color, .4);
+  background-color: toThemeColor($color);
+  color: toThemeColor(button-color);
 
-  &:hover {
-    color: #fff;
-    background-color: toThemeColor($color);
+  &.is-outline {
+    border-color: toThemeColor($color, .7);
+    background-color: transparent;
+    color: toThemeColor(button-outline-color);
+  }
+
+  &:hover:not(.is-loading-active) {
+    color: toThemeColor(button-state-color);
+    background-color: toThemeColor($color + -hover);
     border-color: transparent;
   }
 
-  &:active {
-    color: #fff;
-    // background-color: toThemeColor($color, 6%);
+  &:active:not(.is-loading-active) {
+    background-color: toThemeColor($color + -active);
+    color: toThemeColor(button-state-color);
   }
 }
 
@@ -118,4 +127,9 @@
       color: toThemeColor($style);
     }
   }
+}
+
+@mixin focus-outline() {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
 }

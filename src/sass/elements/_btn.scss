@@ -2,40 +2,41 @@
   @include control-reset;
   @include control-transition;
 
-  border: var(--control-border-width) solid;
+  box-shadow: var(--button-shadow);
+  border-radius: var(--main-radius);
+  border: var(--control-border-width) solid transparent;
   font-size: var(--control-font-size);
-  padding: .6em 1em;
+  padding: var(--control-padding);
+  line-height: normal;
   cursor: pointer;
-  min-width: 11em;
+  // text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: var(--button-letter-spacing);
   text-align: center;
+
+  &:active {
+    transition-duration: 0ms;
+  }
 
   &.is-primary { @include button-color(primary); }
   &.is-success { @include button-color(success); }
-  &.is-info { @include button-color(info); }
+  // &.is-info { @include button-color(info); }
   &.is-warning { @include button-color(warning); }
   &.is-danger { @include button-color(danger); }
 
-  &.is-cancel {
+  &.is-secondary {
     background-color: transparent;
-    color: toThemeColor(primary);
     border-color: transparent;
+    box-shadow: none;
 
-    &:hover {
-      background-color: toThemeColor(primary, .3);
+    &:hover:not(.is-loading-active) {
+      background-color: toThemeColor(primary, .1);
+      color: toThemeColor(primary);
       border-color: transparent;
     }
 
-    &:active {
-      // background-color: toThemeColor(primary, .4);
-    }
-  }
-
-  &.is-secondary {
-    background-color: transparent;
-    border-color: toThemeColor(border, .6);
-
-    &:hover {
-      border-color: toThemeColor(border);
+    &:active:not(.is-loading-active) {
+      background-color: toThemeColor(primary, .2);
     }
   }
 
@@ -96,7 +97,7 @@
     }
 
     &::after {
-      animation: button-spin .6s linear infinite;
+      animation: button-spin .5s linear infinite;
       border-color: #fff transparent transparent;
       border-style: solid;
       border-width: $_border-width;

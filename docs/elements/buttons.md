@@ -3,7 +3,7 @@
 
 ## How to use
 
-Add class `btn` to a `button`, `a`
+Add class `btn` to a `button` or `a`
 
 <div class="v-buttons">
 <button class="btn">Button</button>
@@ -24,20 +24,34 @@ There are a few of classes for styling buttons
 <button class="btn is-primary">Primary button</button>
 <button class="btn is-secondary">Secondary button</button>
 <button class="btn is-success">Success button</button>
-<button class="btn is-info">Info button</button>
 <button class="btn is-warning">Warning button</button>
 <button class="btn is-danger">Danger button</button>
-<button class="btn is-cancel">Cancel button</button>
 </div>
 
 ```html
 <button class="btn is-primary">Primary button</button>
 <button class="btn is-secondary">Secondary button</button>
 <button class="btn is-success">Success button</button>
-<button class="btn is-info">Info button</button>
 <button class="btn is-warning">Warning button</button>
 <button class="btn is-danger">Danger button</button>
-<button class="btn is-cancel">Cancel button</button>
+```
+
+Outline variant
+
+<div class="v-buttons">
+<button class="btn is-outline is-primary">Primary button</button>
+<button class="btn is-outline is-secondary">Secondary button</button>
+<button class="btn is-outline is-success">Success button</button>
+<button class="btn is-outline is-warning">Warning button</button>
+<button class="btn is-outline is-danger">Danger button</button>
+</div>
+
+```html
+<button class="btn is-outline is-primary">Primary button</button>
+<button class="btn is-outline is-secondary">Secondary button</button>
+<button class="btn is-outline is-success">Success button</button>
+<button class="btn is-outline is-warning">Warning button</button>
+<button class="btn is-outline is-danger">Danger button</button>
 ```
 
 
@@ -75,14 +89,14 @@ For the disabled button, add the attribute `[disabled]`, (for links add `is-disa
 
 There are only two sizes `.is-medium` and `.is-large`
 
-<button class="btn">Default size</button>
-<button class="btn is-medium">Medium size</button>
-<button class="btn is-large">Large size</button>
+<button class="btn is-primary">Default size</button>
+<button class="btn is-primary is-medium">Medium size</button>
+<button class="btn is-primary is-large">Large size</button>
 
 ```html
-<button class="btn">Default size</button>
-<button class="btn is-medium">Medium size</button>
-<button class="btn is-large">Large size</button>
+<button class="btn is-primary">Default size</button>
+<button class="btn is-primary is-medium">Medium size</button>
+<button class="btn is-primary is-large">Large size</button>
 ```
 
 

@@ -121,7 +121,9 @@ gulp.task('sass', () => {
     .pipe(_.sass(config.sass))
 
     .pipe(_.postcss([
-        // require('postcss-custom-properties'),
+        require('postcss-custom-properties', {
+          preserve: false
+        }),
         require('autoprefixer')(config.postcss.autoprefixer),
     ]))
 
