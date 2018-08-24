@@ -45,9 +45,7 @@ Forms provide the most common control styles used in forms, including input, tex
     <label class="form-label"></label>
     <label class="checkbox-field">
       <input type="checkbox">
-      <span class="checkbox">
-        <svg class="u-svg-icon"><use xlink:href="/sprite.svg#svg-check"></use></svg>
-      </span>
+      <span class="checkbox"></span>
       <span>Remember me</span>
     </label>
   </div>
@@ -55,7 +53,7 @@ Forms provide the most common control styles used in forms, including input, tex
     <label class="form-label"></label>
     <div class="form-actions">
       <button class="btn is-primary" type="submit">Send</button>
-      <button class="btn is-cancel" type="reset">Cancel</button>
+      <button class="btn is-secondary" type="reset">Cancel</button>
     </div>
   </div>
 </form>
@@ -117,9 +115,7 @@ Forms provide the most common control styles used in forms, including input, tex
 
     <label class="checkbox-field">
       <input type="checkbox">
-      <span class="checkbox">
-        <svg class="u-svg-icon"><use xlink:href="/sprite.svg#svg-check"></use></svg>
-      </span>
+      <span class="checkbox"></span>
 
       <span>Remember me</span>
     </label>
@@ -238,11 +234,11 @@ A prefix or suffix is used to provide icons on an input or any additional inform
 
 <div class="form-group">
   <div class="form-prefix">
-    <svg class="u-svg-icon"><use xlink:href="sprite.svg#svg-filter"></use></svg>
+    <i class="fas fa-filter"></i>
   </div>
   <input class="form-control" placeholder="Search something...">
   <div class="form-suffix">
-    <svg class="u-svg-icon"><use xlink:href="sprite.svg#svg-search"></use></svg>
+    <i class="fas fa-search"></i>
   </div>
 </div>
 
@@ -250,13 +246,13 @@ A prefix or suffix is used to provide icons on an input or any additional inform
 <div class="form-group">
 
   <div class="form-prefix">
-    <svg class="u-svg-icon"><use xlink:href="sprite.svg#svg-filter"></use></svg>
+    <i class="fas fa-filter"></i>
   </div>
 
   <input class="form-control" placeholder="Search something...">
 
   <div class="form-suffix">
-    <svg class="u-svg-icon"><use xlink:href="sprite.svg#svg-search"></use></svg>
+    <i class="fas fa-search"></i>
   </div>
 
 </div>
@@ -294,13 +290,13 @@ If you need to add any text before the input, wrap it in a .form-field and add .
 
 <div class="form-actions">
   <button class="btn is-primary">Upload</button>
-  <button class="btn is-cancel">Cancel</button>
+  <button class="btn is-secondary">Cancel</button>
 </div>
 
 ```html
 <div class="form-actions">
   <button class="btn is-primary">Upload</button>
-  <button class="btn is-cancel">Cancel</button>
+  <button class="btn is-secondary">Cancel</button>
 </div>
 ```
 
@@ -336,18 +332,14 @@ Checkboxes allow you to select something
 
 <label class="checkbox-field">
   <input type="checkbox">
-  <span class="checkbox">
-    <svg class="u-svg-icon"><use xlink:href="/sprite.svg#svg-check"></use></svg>
-  </span>
+  <span class="checkbox"></span>
   <span>Remember me</span>
 </label>
 
 ```html
 <label class="checkbox-field">
   <input type="checkbox">
-  <span class="checkbox">
-    <svg class="u-svg-icon"><use xlink:href="/sprite.svg#svg-check"></use></svg>
-  </span>
+  <span class="checkbox"></span>
 
   <span>Remember me</span>
 </label>
@@ -359,16 +351,19 @@ Checkboxes allow you to select something
 Switches like checkboxes, but has different styles
 
 <label class="switch">
+  <span>Public</span>
   <input type="checkbox">
   <span class="switch-box"></span>
-  <span>Some text</span>
+  <span>Private</span>
 </label>
 
 ```html
 <label class="switch">
+  <span>Public</span>
+
   <input type="checkbox">
   <span class="switch-box"></span>
 
-  <span>Some text</span>
+  <span>Private</span>
 </label>
 ```
