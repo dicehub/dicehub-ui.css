@@ -4,7 +4,8 @@ module.exports = {
 
   head: [
     ['link', { rel: 'stylesheet', href: '/dicehub-ui.css' }],
-    ['link', { rel: 'icon', href: `/logo.png` }]
+    ['link', { rel: 'icon', href: '/logo.png' }],
+    ['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.2.0/css/all.css' }],
   ],
 
   themeConfig: {
