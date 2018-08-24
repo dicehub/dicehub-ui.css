@@ -246,11 +246,7 @@
   cursor: pointer;
   user-select: none;
 
-  > :not(:first-child):not(:last-child) {
-    margin-left: 1rem;
-  }
-
-  > :not(:last-child):not(:first-child) {
+  > :not(:last-child) {
     margin-right: 1rem;
   }
 
