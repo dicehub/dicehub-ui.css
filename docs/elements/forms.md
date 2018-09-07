@@ -203,12 +203,14 @@ There are 4 input states: success, warning, danger and disabled
 <input class="form-control is-success" placeholder="Your data is corret"><br><br>
 <input class="form-control is-warning" placeholder="Your password is too weak"><br><br>
 <input class="form-control is-danger" placeholder="You can not use this email"><br><br>
+<input class="form-control is-focused" placeholder="Select username"><br><br>
 <input class="form-control" disabled placeholder="/john_doe">
 
 ```html
 <input class="form-control is-success" placeholder="Your data is corret"><br><br>
 <input class="form-control is-warning" placeholder="Your password is too weak"><br><br>
 <input class="form-control is-danger" placeholder="You can not use this email"><br><br>
+<input class="form-control is-focused" placeholder="Select username"><br><br>
 <input class="form-control" disabled placeholder="/john_doe">
 ```
 

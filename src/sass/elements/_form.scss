@@ -78,6 +78,8 @@
     @include control-reset;
     @include control-transition;
 
+    --focus-outline: none;
+
     width: 100%;
     border: var(--control-border-width) solid toThemeColor(border);
     font-size: var(--control-font-size);
@@ -97,6 +99,7 @@
       background-color: toThemeColor(primary, .05);
     }
 
+    &.is-focused,
     &:focus {
       border-color: toThemeColor(primary);
       box-shadow: 0 0 3px toThemeColor(primary, .7);
