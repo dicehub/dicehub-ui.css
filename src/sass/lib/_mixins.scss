@@ -48,7 +48,7 @@
 }
 
 @mixin control-reset {
-  background-color: transparent;
+  background-color: toThemeColor(form-control-bg);
   display: inline-block;
   vertical-align: middle;
   border: none;
@@ -60,7 +60,7 @@
   color: inherit;
   line-height: normal;
 
-  border-radius: var(--main-radius);
+  border-radius: var(--control-radius);
 
   &:focus {
     @include focus-outline;

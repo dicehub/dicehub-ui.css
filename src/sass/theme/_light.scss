@@ -4,7 +4,7 @@
 :root {
   // Base
   --font-size: 62.5%;
-  --body-font-size: 1.3rem;
+  --body-font-size: 1.4rem;
   --line-height: 1;
   --line-height-typography: 1.6;
   --font-family: Nunito, 'Open Sans', sans-serif;
@@ -23,7 +23,8 @@
   --large-multiplier: 1.4;
 
   // Main colors
-  --text: #{convert-theme-color(#5f6677)};
+  --text: #{convert-theme-color(#334455)};
+  --text-light: #{convert-theme-color(#5f6677)};
   --body-bg: #{convert-theme-color(#fafafa)};
 
   --primary: #{convert-theme-color(#3279f7)};
@@ -54,12 +55,20 @@
   --form-switch: #{convert-theme-color(#ffffff)};
   --form-switch-box-bg: #{convert-theme-color(#b9c7d4)};
 
+  // Controls
+  --control-border-width: .07em;
+  --control-font-size: 1.5rem;
+  --control-margin: 1.4rem;
+  --control-padding: 1rem 1.6rem;
+  --control-radius: 3px;
+
   // Button
   --button-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
   --button-color: #{convert-theme-color(#fff)};
   --button-outline-color: var(--text);
   --button-state-color: #{convert-theme-color(#fff)};
   --button-letter-spacing: 0.05em;
+  --button-padding: 0.6em 1em;
 
   // Table
   --table-striped-bg: #{convert-theme-color(#f8f9fa)};
@@ -84,12 +93,6 @@
 
   // Cite
   --cite-color: #{convert-theme-color(#999999)};
-
-  // Controls
-  --control-border-width: .07em;
-  --control-font-size: 1.3rem;
-  --control-margin: 2rem;
-  --control-padding: 0.6em 1em;
 
   // Alert
   --alert-padding: 0.6em 2em;
