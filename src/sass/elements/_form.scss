@@ -96,7 +96,7 @@
 
     &:hover {
       border-color: toThemeColor(primary, .7);
-      background-color: toThemeColor(primary, .05);
+      // background-color: toThemeColor(primary, .05);
     }
 
     &.is-focused,
@@ -130,8 +130,10 @@
     flex-shrink: 0;
     padding-top: 0.7em;
     display: block;
-    color: toThemeColor(text);
+    color: toThemeColor(text-light);
     margin-bottom: 0.6em;
+    font-weight: bold;
+    letter-spacing: 0;
   }
 
   &-actions {

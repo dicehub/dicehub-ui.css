@@ -1,6 +1,6 @@
 {
   "name": "@dicehub/dicehub-ui.css",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Dicehub UI Framework",
   "author": "Dicehub Team",
   "license": "MIT",
@@ -41,7 +41,8 @@
   },
   "dependencies": {},
   "files": [
-    "dist/*"
+    "dist/dicehub-ui.css",
+    "dist/dicehub-ui.min.css"
   ],
   "repository": {
     "type": "git",
